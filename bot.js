@@ -11,17 +11,13 @@ bot.on("ready", async () => {
     console.log(e.stack);
   }
 });
-
 bot.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
-
   let messageArray = message.content.split(" ");
   let command = messageArray[0];
   let args = messageArray.slice(1);
-
   if(!command.startsWith(prefix)) return;
-
   switch (command) {
     case `${prefix}userinfo`:
       let embed = new Discord.RichEmbed()
@@ -34,7 +30,6 @@ bot.on("message", async message => {
     break;
     case `${prefix}mute`:
     let toMute = message.guild.member(message.mentions.users.first());
-
     let role = message.guild.roles.find(r => r.name === "Mutado");
     if (!role) {
       try {
@@ -56,7 +51,6 @@ bot.on("message", async message => {
       message.channel.sendMessage("Eu o mutei");
       return;
     }
-
     break;
     case `${prefix}metar`:
       var icao = args;
@@ -86,8 +80,6 @@ bot.on("message", async message => {
       });
     break;
     default:
-
   }
 });
-
 bot.login(process.env.BOT_TOKEN);
