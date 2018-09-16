@@ -81,6 +81,7 @@ bot.on("message", async message => {
           .setAuthor(`TAF de ${icao} de ${r.body.Meta.Timestamp}`)
           .setColor('258FE8')
           .setDescription(r.body['Raw-Report']);
+          .addField("O KIQ E VIADAO", "VELHO TB")
         message.channel.send(embed);
         return;
       });
