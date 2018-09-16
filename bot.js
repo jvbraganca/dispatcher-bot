@@ -3,14 +3,14 @@ const prefix = "!";
 const snekfetch = require('snekfetch');
 const axios = require('axios');
 // Setting up my API Keys, you can do it here as a string, I am setting these variables on the server side
-// const awApiKey = process.env.AW_API_KEY; // AW stands for Aisweb
-// const awApiPass = process.env.AW_API_PASS; // AW stands for Aisweb
-// const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
+const awApiKey = process.env.AW_API_KEY; // AW stands for Aisweb
+const awApiPass = process.env.AW_API_PASS; // AW stands for Aisweb
+const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
 
-const awApiKey = "1308347209"; // AW stands for Aisweb
-const awApiPass = "d384847b-6e6a-11e8-a51a-00505680c1b4"; // AW stands for Aisweb
-const icaoApiKey = "000b1180-b9d8-11e8-84f7-7d88bffacca3"; // This is the key for the ICAO API key
-// End of API Keys
+// const awApiKey = "1308347209"; // AW stands for Aisweb
+// const awApiPass = "d384847b-6e6a-11e8-a51a-00505680c1b4"; // AW stands for Aisweb
+// const icaoApiKey = "000b1180-b9d8-11e8-84f7-7d88bffacca3"; // This is the key for the ICAO API key
+// // End of API Keys
 const bot = new Discord.Client({disableEveryone: true,});
 bot.on("ready", async () => {
   console.log(`Yaaaay, let's roll! ${bot.user.username}`);
@@ -125,5 +125,4 @@ bot.on("message", async message => {
     default:
   }
 });
-// bot.login(process.env.BOT_TOKEN);
-bot.login("NDkwNjQyNjU5NDI2MzA0MDEx.Dn8WCQ.IIdxPdtTWoMtWN5lA1zkZiJsxfo");
+bot.login(process.env.BOT_TOKEN);
