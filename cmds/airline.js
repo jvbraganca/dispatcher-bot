@@ -1,4 +1,5 @@
 const Discord = module.require("discord.js");
+const axios = require('axios');
 
 module.exports.run = async (bot, message, args) => {
   var icao = args;
