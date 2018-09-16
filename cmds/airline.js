@@ -21,6 +21,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("# acidentes em 5 anos", `${response2.data['0'].accidents_5y}`, true)
       .addField("# acidentes fatais em 5 anos", `${response2.data['0'].fatalaccidents_5y}`)
       .addField("Pais de origem", `${response2.data['0'].countryName}`, true)
+      .addField("Callsign", `${response1.data['0'].telephonyName}`, true)
       .addField("Media de idade da frota", `${fleet_age}`, true)
       .addField("Aeronaves 25+ anos", `${response2.data['0'].aircraft_over_25y}`, true)
       .addField("# de rotas", `${response2.data['0'].routes}`)
