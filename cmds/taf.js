@@ -3,6 +3,7 @@ const snekfetch = require('snekfetch');
 
 module.exports.run = async (bot, message, args) => {
   var icao = args;
+  var icao = icao.toUpperCase();
     snekfetch.get(`https://avwx.rest/api/taf/${icao}?options=summary`)
     .send({ usingGoodRequestLibrary: true })
     .then(r => {
