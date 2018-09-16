@@ -84,6 +84,19 @@ bot.on("message", async message => {
         return;
       });
     break;
+    case `${prefix}airline`:
+      var icao = args;
+      snekfetch.get(`https://v4p4sz5ijk.execute-api.us-east-1.amazonaws.com/anbdata/airlines/designators/code-list?api_key=${icaoApiKey}&format=json&states=&operators=${icao}`)
+      .send({ usingGoodRequestLibrary: true })
+      .then(r => {
+        let embed = new Discord.RichEmbed()
+          .setAuthor(r.body.operatorName)
+          .setColor(`258FE8`)
+          .addField("Callsign", r.body.telephonyName);
+        message.channel.send(embed);
+        return;
+      });
+    break;  
     default:
   }
 });
