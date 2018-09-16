@@ -1,6 +1,11 @@
 const Discord = require("discord.js");
 const prefix = "!";
 const snekfetch = require('snekfetch');
+// Setting up my API Keys, you can do it here as a string, I am setting these variables on the server side
+const awApiKey = process.env.AW_API_KEY; // AW stands for Aisweb
+const awApiPass = process.env.AW_API_PASS; // AW stands for Aisweb
+const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
+// End of API Keys
 const bot = new Discord.Client({disableEveryone: true,});
 bot.on("ready", async () => {
   console.log(`Yaaaay, let's roll! ${bot.user.username}`);
@@ -75,10 +80,6 @@ bot.on("message", async message => {
           .setAuthor(`TAF de ${icao} de ${r.body.Meta.Timestamp}`)
           .setColor('258FE8')
           .setDescription(r.body['Raw-Report']);
-<<<<<<< HEAD
-=======
-          .addField("O KIQ E VIADAO", "VELHO TB")
->>>>>>> parent of da621c1... Syntax error
         message.channel.send(embed);
         return;
       });
