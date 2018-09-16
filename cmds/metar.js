@@ -1,6 +1,5 @@
 const Discord = module.require("discord.js");
 const snekfetch = require('snekfetch');
-
 module.exports.run = async (bot, message, args) => {
   var icao = args;
     snekfetch.get(`http://avwx.rest/api/metar/${icao}?options=&format=json&onfail=cache`)
@@ -15,7 +14,6 @@ module.exports.run = async (bot, message, args) => {
     return;
   })
 }
-
 module.exports.help = {
   name: "metar",
   usage: "Digite !metar ICAO para obter o METAR da localidade"

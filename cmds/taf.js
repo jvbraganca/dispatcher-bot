@@ -1,6 +1,5 @@
 const Discord = module.require("discord.js");
 const snekfetch = require('snekfetch');
-
 module.exports.run = async (bot, message, args) => {
   var icao = args;
     snekfetch.get(`https://avwx.rest/api/taf/${icao}?options=summary`)
@@ -14,7 +13,6 @@ module.exports.run = async (bot, message, args) => {
     return;
   });
 }
-
 module.exports.help = {
   name: "taf",
   usage: "Digite !taf ICAO para obter o TAF da localidade"
