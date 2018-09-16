@@ -18,16 +18,16 @@ module.exports.run = async (bot, message, args) => {
       .setColor('258FE8')
       .addField("Modelos de aeronaves", `${response2.data['0'].models}`, true)
       .addField("Quantidade de aeronaves", `${response2.data['0'].aircraft}`, true)
-      .addField("# acidentes em 5 anos", `${response2.data['0'].accidents_5y}`, true)
-      .addField("# acidentes fatais em 5 anos", `${response2.data['0'].fatalaccidents_5y}`)
+      .addField("# acidentes/5anos", `${response2.data['0'].accidents_5y}`, true)
+      .addField("# acidentes fatais/5anos", `${response2.data['0'].fatalaccidents_5y}`)
       .addField("Pais de origem", `${response2.data['0'].countryName}`, true)
       .addField("Callsign", `${response1.data['0'].telephonyName}`, true)
-      .addField("Media de idade da frota", `${fleet_age}`, true)
-      .addField("Aeronaves 25+ anos", `${response2.data['0'].aircraft_over_25y}`)
+      .addField("Media de idade da frota", `${fleet_age}`)
+      .addField("Aeronaves 25+ anos", `${response2.data['0'].aircraft_over_25y}`, true)
       .addField("# de rotas", `${response2.data['0'].routes}`, true)
-      .addField("# de conexoes", `${response2.data['0'].connections}`, true)
+      .addField("# de conexoes", `${response2.data['0'].connections}`)
       .addField("# de destinos", `${response2.data['0'].destinations}`, true)
-      .addField("# de voos por ano", `${response2.data['0'].annual_flights}`)
+      .addField("# de voos por ano", `${response2.data['0'].annual_flights}`, true)
       .addField("# de voos intl por ano", `${response2.data['0'].annual_international_flights}`, true);
     message.channel.send(embed);
     return;
