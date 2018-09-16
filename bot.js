@@ -7,6 +7,12 @@ const awApiKey = process.env.AW_API_KEY; // AW stands for Aisweb
 const awApiPass = process.env.AW_API_PASS; // AW stands for Aisweb
 const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
 
+<<<<<<< HEAD
+=======
+// const awApiKey = "1308347209"; // AW stands for Aisweb
+// const awApiPass = "d384847b-6e6a-11e8-a51a-00505680c1b4"; // AW stands for Aisweb
+// const icaoApiKey = "000b1180-b9d8-11e8-84f7-7d88bffacca3"; // This is the key for the ICAO API key
+>>>>>>> 32225eb94d3d489c993eab2d5ff156a908e5c3a1
 // // End of API Keys
 const bot = new Discord.Client({disableEveryone: true,});
 bot.on("ready", async () => {
