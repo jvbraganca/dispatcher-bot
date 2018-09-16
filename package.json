@@ -1,0 +1,16 @@
+{
+  "name": "dispatcherbot",
+  "version": "1.0.0",
+  "description": "Helps you out with weather info!",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "snekfetch": "^4.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joao Braganca",
+  "license": "MIT"
+}
