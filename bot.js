@@ -75,6 +75,10 @@ bot.on("message", async message => {
           .setAuthor(`TAF de ${icao} de ${r.body.Meta.Timestamp}`)
           .setColor('258FE8')
           .setDescription(r.body['Raw-Report']);
+<<<<<<< HEAD
+=======
+          .addField("O KIQ E VIADAO", "VELHO TB")
+>>>>>>> parent of da621c1... Syntax error
         message.channel.send(embed);
         return;
       });
