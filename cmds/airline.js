@@ -1,5 +1,7 @@
 const Discord = module.require("discord.js");
 const axios = require('axios');
+const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
+
 
 module.exports.run = async (bot, message, args) => {
   var icao = args;
@@ -27,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("# de destinos", `${response2.data['0'].destinations}`, true)
       .addField("# de voos por ano", `${response2.data['0'].annual_flights}`, true)
       .addField("# de voos intl por ano", `${response2.data['0'].annual_international_flights}`);
-    message.channel.send({ embed: embed});
+    message.channel.send(embed);
     return;
   }))
   .catch(error => {
