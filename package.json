@@ -5,11 +5,16 @@
   "main": "bot.js",
   "dependencies": {
     "axios": "^0.18.0",
-    "discord.js": "^11.4.2",
-    "snekfetch": "^4.0.4"
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0",
+    "snekfetch": "^4.0.4",
+    "xml-js": "^1.6.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
   "scripts": {
+    "dev": "nodemon ./bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joao Braganca",

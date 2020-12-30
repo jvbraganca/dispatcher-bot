@@ -1,14 +1,11 @@
+require('dotenv').config()
 const Discord = require("discord.js");
-const prefix = "!";
-const snekfetch = require('snekfetch');
-const axios = require('axios');
 const fs = require("fs");
-// Setting up my API Keys, you can do it here as a string, I am setting these variables on the server side
-const awApiKey = process.env.AW_API_KEY; // AW stands for Aisweb
-const awApiPass = process.env.AW_API_PASS; // AW stands for Aisweb
+const prefix = ".";
 
 // End of API Keys
-const bot = new Discord.Client({disableEveryone: true,});
+const bot = new Discord.Client({disableEveryone: true});
+bot.login(process.env.BOT_TOKEN)
 bot.commands = new Discord.Collection();
 
 fs.readdir("./cmds/", (err, files) => {
@@ -20,7 +17,7 @@ fs.readdir("./cmds/", (err, files) => {
   }
   console.log(`Loading ${jsfiles.length} commands`);
   jsfiles.forEach((f, i) => {
-    let props = require(`./cmds/${f}`);
+    const props = require(`./cmds/${f}`);
     console.log(`${i + 1}: ${f} loaded!`);
     bot.commands.set(props.help.name, props);
   });
@@ -47,4 +44,3 @@ bot.on("message", async message => {
   let cmd = bot.commands.get(command.slice(prefix.length));
   if(cmd) cmd.run(bot, message, args);
 });
-bot.login(process.env.BOT_TOKEN);

@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const axios = require('axios');
 const icaoApiKey = process.env.ICAO_API_KEY; // This is the key for the ICAO API key
+require('dotenv').config()
 
 module.exports.run = async (bot, message, args) => {
   var icao = args;
