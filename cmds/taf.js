@@ -7,8 +7,8 @@ module.exports.run = async (bot, message, args) => {
   const icao = args[0].toUpperCase();
   await axios.get(`https://avwx.rest/api/taf/${icao}?options=summary&format=json`)
     .then(response => {
-      console.log(response);
       const { data } = response
+      message.channel.send(`Olá ${bot.user.username}, aqui está o TAF: `);
       const embed = {
         color: 1752220,
         title: `TAF de ${icao} de ${data.time.dt}`,
