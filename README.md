@@ -31,7 +31,7 @@ WIP
 
 ## Built With
 
-* [Snekfetch](https://snekfetch.js.org/) - Snekfetch is a fast, efficient, and user-friendly library for making HTTP requests.
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 * [Aviation Weather REST API](https://avwx.rest) - Getting METAR/TAF from airports
 * [Discord.js](https://discord.js.org/#/) - discord.js is a powerful node.js module that allows you to interact with the Discord API very easily
 
