@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       console.log(response);
       const { data } = response
       const embed = {
-        hexColor: "#3480eb",
+        color: 1752220,
         title: `TAF de ${icao} de ${data.time.dt}`,
         description: data.raw,
         fields: [

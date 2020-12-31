@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     if (response.status !== 200) return
     const { data } = response
     const embed = {
-      hexColor: "#3480eb",
+      color: 1752220,
       title: `Metar de ${icao} de ${data.time.dt}`,
       description: data.sanitized,
       fields: [
