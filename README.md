@@ -17,7 +17,7 @@ First of all, you need to invite me to you Discord server (must have admin power
 
 Please, go to: [Discord Application page](https://discordapp.com/oauth2/authorize?client_id=490642659426304011&permissions=8&scope=bot) and authorize me to join you. 
 
-You should se me in your server after this step. Look for Dispatcher on the online list.
+You should see me in your server after this step. Look for Dispatcher on the online list.
 
 ![Screenshot of Discord](https://i.imgur.com/0SpiYhf.png)
 
