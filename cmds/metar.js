@@ -57,7 +57,7 @@ module.exports.run = async (bot, message, args) => {
         url: "https://cdn.discordapp.com/app-icons/490642659426304011/053e005a8c51442329fceef6361543e9.png" 
       },
       footer: {
-        text: "Dispatcher Bot - Braganssão"
+        text: "Dispatcher Bot - [Braganssão](https://github.com/jvbraganca/dispatcher-bot/)"
       }
     }
     message.channel.send({ embed })
