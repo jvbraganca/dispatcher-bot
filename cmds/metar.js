@@ -52,12 +52,16 @@ module.exports.run = async (bot, message, args) => {
             **Remarks :** ${data.remarks}
           `
         },
+        {
+          name: "GitHub Repo",
+          value: "[dispatcher-bot](https://github.com/jvbraganca/dispatcher-bot/)"
+        }
       ],
       thumbnail: {
         url: "https://cdn.discordapp.com/app-icons/490642659426304011/053e005a8c51442329fceef6361543e9.png" 
       },
       footer: {
-        text: "Dispatcher Bot - [Braganssão](https://github.com/jvbraganca/dispatcher-bot/)"
+        text: "Dispatcher Bot - Braganssão"
       }
     }
     message.channel.send({ embed })
