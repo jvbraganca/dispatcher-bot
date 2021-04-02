@@ -4,7 +4,7 @@
   "description": "Helps you out with weather info!",
   "main": "bot.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": ">=0.21.1",
     "discord.js": "^11.6.4",
     "dotenv": "^8.2.0",
     "snekfetch": "^4.0.4",
